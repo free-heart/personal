@@ -12,10 +12,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.73"
+    "flexsearch": "^0.7.31",
+    "vitepress": "1.0.0-alpha.73",
+    "vitepress-plugin-search": "^1.0.4-alpha.20"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
-    "element-plus": "^2.3.3"
+    "element-plus": "^2.3.3",
+    "vitepress-plugin-pagefind": "^0.2.3"
   }
 }

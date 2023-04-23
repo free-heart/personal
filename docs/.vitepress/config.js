@@ -1,9 +1,12 @@
 import { defineConfig } from "vitepress"
 import nav from "./nav"
 import sidebar from "./sidebar"
+import { SearchPlugin } from "vitepress-plugin-search"
+import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 
 export default defineConfig({
   appearance: true, // 是否启用 "暗模式"
+  // lang: 'zh-cn',
   base: '/personal/',
   title: '个人空间',
   description: '个人空间',
@@ -34,15 +37,28 @@ export default defineConfig({
     docFooter: {
       prev: '上一页',
       next: '下一页',
-    },
-    algolia: {
-      appId: 'D9NS4SDV3F',
-      apiKey: '4fca37e03c6e1bbb145d7871bb8e060c',
-      indexName: 'test'
-    },
+    }
   },
 
   markdown: {
     // lineNumbers: true
+  },
+  vite: {
+    plugins:[
+      // pagefindPlugin({
+      //   customSearchQuery: chineseSearchOptimize,
+      //   btnPlaceholder: '搜索',
+      //   placeholder: '搜索文档',
+      //   emptyText: '空空如也',
+      //   heading: '共: {{searchResult}} 条结果'
+      // }),
+      SearchPlugin({
+        // previewLength: 62,
+        // buttonLabel: "Search",
+        // placeholder: "Search docs",
+        // allow: [],
+        // ignore: [],
+      })
+    ],
   }
 })

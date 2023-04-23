@@ -1,7 +1,7 @@
 {
-  "index_name": "personal",
+  "index_name": "test",
   "start_urls": [
-    "http://www.example.com/docs/"
+    "https://free-heart.github.io/personal/"
   ],
   "stop_urls": [],
   "selectors": {
