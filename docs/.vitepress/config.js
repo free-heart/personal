@@ -17,21 +17,23 @@ export default defineConfig({
     nav: nav,
     sidebar: sidebar,
     socialLinks: [
-      {  icon: 'github', link: 'https://github.com/' }
+      {  icon: 'github', link: 'https://github.com/free-heart/personal' }
     ],
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2019-present'
     },
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      pattern: ({ relativePath }) => {
+        return `https://github.com/free-heart/personal/tree/main/docs/${relativePath}`
+      },
       text: '编辑'
     },
     outlineTitle: '本页目录',
-    lastUpdatedText: '上次更新',
+    lastUpdatedText: '最后更新时间',
     docFooter: {
-      prev: 'Previous',
-      next: 'Next',
+      prev: '上一页',
+      next: '下一页',
     },
     algolia: {
       appId: 'D9NS4SDV3F',
