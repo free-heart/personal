@@ -1,0 +1,30 @@
+{
+  "index_name": "personal",
+  "start_urls": [
+    "http://www.example.com/docs/"
+  ],
+  "stop_urls": [],
+  "selectors": {
+    "lvl0": {
+      "selector": "sidebar-links sidebar-group-items",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "h1",
+    "lvl2": "h2",
+    "lvl3": "h3",
+    "lvl4": "h4",
+    "lvl5": "h5",
+    "text": "p, li, code"
+  
+  },
+  "strip_chars": " .,;:#",
+  "custom_settings": {
+     "attributesForFaceting" : ["language", "version"]
+  },
+  "conversation_id": [
+    "809666386"
+  ],
+  "scrap_start_urls": false,
+  "nb_hits": "OUTPUT OF THE CRAWL"
+}
